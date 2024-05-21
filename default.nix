@@ -51,7 +51,7 @@ in {
     };
     # improves startup times
     luaLoader.enable = true;
-    package = unstable.neovim-nightly;
+    package = unstable.neovim;
     keymaps = [
       {
         mode = "i";
