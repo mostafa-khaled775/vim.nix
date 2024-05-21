@@ -1,20 +1,15 @@
-{ pkgs, config, lib, ... }:
+{ config, lib, ... }:
 let
   nixvim = import (builtins.fetchGit {
     url = "https://github.com/nix-community/nixvim";
     ref = "nixos-23.11";
   });
+  unstable = import <unstable> { };
   leader = "<space>";
   lspKeymapPrefix = "${leader}l";
   telescopeKeymapPrefix = "${leader}f";
   gitKeymapPrefix = "${leader}g";
 in {
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url =
-        "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
-    }))
-  ];
   imports = [
     # For home-manager
     nixvim.homeManagerModules.nixvim
@@ -45,6 +40,7 @@ in {
     ./comment.nix
     ./cmp.nix
     ./luasnip.nix
+    ./surround.nix
   ];
 
   programs.nixvim = {
@@ -55,7 +51,7 @@ in {
     };
     # improves startup times
     luaLoader.enable = true;
-    package = pkgs.neovim-nightly;
+    package = unstable.neovim-nightly;
     keymaps = [
       {
         mode = "i";
