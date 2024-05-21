@@ -10,63 +10,73 @@
         mode = "n";
         key = "]h";
         action = "<cmd>Gitsigns next_hunk<cr>";
+        options.desc = "Next hunk";
       }
       {
         mode = "n";
         key = "[h";
         action = "<cmd>Gitsigns prev_hunk<cr>";
+        options.desc = "Previous hunk";
       }
 
       # staging
       {
         mode = "n";
-        key = "${gitKeymapPrefix}gs";
+        key = "${gitKeymapPrefix}s";
         action = "<cmd>Gitsigns stage_hunk<cr>";
+        options.desc = "Stage hunk";
       }
       {
         mode = "n";
-        key = "${gitKeymapPrefix}gS";
+        key = "${gitKeymapPrefix}S";
         action = "<cmd>Gitsigns stage_buffer<cr>";
+        options.desc = "Stage buffer";
       }
 
       # restoring
       {
         mode = "n";
-        key = "${gitKeymapPrefix}gr";
+        key = "${gitKeymapPrefix}r";
         action = "<cmd>Gitsigns reset_hunk<cr>";
+        options.desc = "Reset hunk";
       }
       {
         mode = "n";
-        key = "${gitKeymapPrefix}gR";
+        key = "${gitKeymapPrefix}R";
         action = "<cmd>Gitsigns reset_buffer<cr>";
+        options.desc = "Reset buffer";
       }
 
       #actions
       {
         mode = "n";
-        key = "${gitKeymapPrefix}ga";
+        key = "${gitKeymapPrefix}a";
         action = "<cmd>Gitsigns get_actions<cr>";
+        options.desc = "Get git actions";
       }
 
       # diffing
       {
         mode = "n";
-        key = "${gitKeymapPrefix}gd";
+        key = "${gitKeymapPrefix}d";
         action = "<cmd>Gitsigns diffthis<cr>";
+        options.desc = "Diff current buffer";
       }
 
       # preview
       {
         mode = "n";
-        key = "${gitKeymapPrefix}gp";
+        key = "${gitKeymapPrefix}p";
         action = "<cmd>Gitsigns preview_hunk<cr>";
+        options.desc = "Preview hunk";
       }
 
       # show blame
       {
         mode = "n";
-        key = "${gitKeymapPrefix}gb";
+        key = "${gitKeymapPrefix}b";
         action = "<cmd>Gitsigns blame_line<cr>";
+        options.desc = "Blame line";
       }
     ];
   };
