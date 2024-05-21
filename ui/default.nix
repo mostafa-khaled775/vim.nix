@@ -45,8 +45,6 @@
         lazyUpdateContext = true;
         lsp.autoAttach = true;
       };
-      specs.enable = true;
-      todo-comments.enable = true;
       which-key.enable = true;
       lastplace.enable = true;
       fidget.enable = true;
